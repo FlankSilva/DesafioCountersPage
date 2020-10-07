@@ -8,11 +8,12 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint .",
-    "eslint:config": "eslint --fix src --ext .jsx"
+    "eslint:config": "eslint --fix src --ext .js"
   },
   "dependencies": {
     "react": "16.13.1",
-    "react-native": "0.63.3"
+    "react-native": "0.63.3",
+    "reactotron-react-native": "^5.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
