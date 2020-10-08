@@ -7,7 +7,7 @@ import { Container, Content } from './styles';
 import Card from '../../components/Card'
 
 const CountersPage = () => {
-  const [selected, setSelected] = useState(null)
+  const [selected, setSelected] = useState([])
 
   const data = [
     {
