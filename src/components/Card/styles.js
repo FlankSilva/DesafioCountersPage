@@ -1,11 +1,20 @@
-import styled from 'styled-components'
+import styled, {css} from 'styled-components'
+import {  TouchableOpacity } from 'react-native';
 
-export const Container = styled.View`
+export const Container = styled(TouchableOpacity)`
   width: 270px;
   height: 150px;
 
   background: #fff;
   border: 1px solid #000;
+  margin-bottom: 15px;
+
+  ${props => 
+    props.cardSelect &&
+    css`
+      background: blue
+    `
+  }
 `
 
 export const TitleCounter = styled.Text`

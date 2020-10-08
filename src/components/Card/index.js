@@ -1,12 +1,24 @@
-import React from 'react';
-import {  Text } from 'react-native';
+import React, { useState } from 'react';
 
 import { Container, TitleCounter, ContainerConter, Conter } from './styles';
 
-const Card = ({ title, counts }) => {
+const Card = ({ title, counts}) => {
+  const [cardSelect, setCardSelect] = useState(false) 
+
+  const hgandleAlterSelect = () => {
+
+    if (cardSelect) {
+      setCardSelect(false)
+    } else {
+      setCardSelect(true)
+    }
+  }
 
   return (
-    <Container>
+    <Container 
+      onPress={hgandleAlterSelect} 
+      cardSelect={cardSelect}
+    >
       <TitleCounter>
         {title}
       </TitleCounter>
