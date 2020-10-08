@@ -1,27 +1,25 @@
 import React from 'react';
 import { View, Text } from 'react-native';
-import { useNavigation } from '@react-navigation/native'
-import { RectButton } from 'react-native-gesture-handler'
+import { useNavigation } from '@react-navigation/native';
+import { RectButton } from 'react-native-gesture-handler';
 
-// import { Container } from './styles';
+import { Container } from './styles';
 
 const CountersPage = () => {
-  const navigation = useNavigation()
+  const navigation = useNavigation();
 
   const handleNavigateToConfigPage = () => {
-    navigation.navigate('ConfigPage')
-  }
+    navigation.navigate('ConfigPage');
+  };
 
   return (
-    <View>
+    <Container>
       <Text>Page Counters</Text>
       <RectButton onPress={handleNavigateToConfigPage}>
-        <Text>
-          Botão
-        </Text>
+        <Text>Botão</Text>
       </RectButton>
-    </View>
-  )
-}
+    </Container>
+  );
+};
 
 export default CountersPage;
