@@ -19,7 +19,6 @@ function MyTabs() {
         activeTintColor: '#fff',
         style: {
           backgroundColor: '#7159c1',
-          // paddingBottom: '10',
         },
       }}
     >
@@ -27,6 +26,7 @@ function MyTabs() {
         name="CountersPage" 
         component={CountersPage} 
         options={{
+          title: 'HOME',
           tabBarIcon: ({ }) => (
             <Icon name="home" color="#fff" size={30} />
           )
@@ -36,6 +36,7 @@ function MyTabs() {
         name="ConfigPage" 
         component={ConfigPage}
         options={{
+          title: 'CONFIGURAÇÃO',
           tabBarIcon: ({ }) => (
             <Icon name="settings" color="#fff" size={30} />
           )
