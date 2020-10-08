@@ -2,22 +2,22 @@ import React, { useState } from 'react';
 
 import { Container, TitleCounter, ContainerConter, Conter } from './styles';
 
-const Card = ({ title, counts}) => {
-  const [cardSelect, setCardSelect] = useState(false) 
+const Card = ({ title, counts, selected, setSelected}) => {
+  // const [cardSelect, setCardSelect] = useState(false) 
 
-  const hgandleAlterSelect = () => {
+  // const hgandleAlterSelect = () => {
 
-    if (cardSelect) {
-      setCardSelect(false)
-    } else {
-      setCardSelect(true)
-    }
-  }
+  //   if (cardSelect) {
+  //     setCardSelect(false)
+  //   } else {
+  //     setCardSelect(true)
+  //   }
+  // }
 
   return (
     <Container 
-      onPress={hgandleAlterSelect} 
-      cardSelect={cardSelect}
+      onPress={setSelected} 
+      cardSelect={selected}
     >
       <TitleCounter>
         {title}
