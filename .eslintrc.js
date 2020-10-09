@@ -35,5 +35,8 @@ module.exports = {
     ],
     'import/prefer-default-export': 'off',
     "no-console": "off",
+    "no-empty-pattern": "off",
+    "no-unused-vars": "off",
+    "react/prop-types": "off"
   },
 };

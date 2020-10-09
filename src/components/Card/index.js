@@ -2,23 +2,17 @@ import React, { useState } from 'react';
 
 import { Container, TitleCounter, ContainerConter, Conter } from './styles';
 
-const Card = ({ title, counts, selected, setSelected}) => {
+const Card = ({ title, counts, selected, setSelected }) => {
+  console.tron.log(selected);
 
   return (
-    <Container 
-      onPress={setSelected} 
-      cardSelect={selected}
-    >
-      <TitleCounter>
-        {title}
-      </TitleCounter>
+    <Container onPress={setSelected} cardSelect={selected}>
+      <TitleCounter>{title}</TitleCounter>
       <ContainerConter>
-        <Conter>
-          {counts}
-        </Conter>
+        <Conter cardSelect={selected}>{counts}</Conter>
       </ContainerConter>
     </Container>
-  )
-}
+  );
+};
 
 export default Card;
